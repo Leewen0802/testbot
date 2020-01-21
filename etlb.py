@@ -92,7 +92,7 @@ def sendMessageWithMention(to, mid):
         logError(error)
 def helpmessage():
     helpMessage = """╔══════════════
-╠♥ ✿✿✿ 戰舞の特製單機半垢 ✿✿✿ ♥
+╠♥ ✿✿✿ ETLB特製單機半垢 ✿✿✿ ♥
 ║
 ╠══✪〘 Help Message 〙✪═══
 ║
@@ -163,14 +163,14 @@ def helpmessage():
 ╠➥ Calender 日曆
 ╠➥ CheckDate「Date」日子計算
 ║
-╚═〘 Created By: ©ながみ すずか™  〙"""
+╚═〘 Created By: ©EagleTECH™  〙"""
     return helpMessage
 wait = {
     "share":False,
     "sender" :{},
 }
-admin =[clMID,"u883d294c6b2cf167520b1092a5b72fbf"]
-owners = ["ua10c2ad470b4b6e972954e1140ad1891","u883d294c6b2cf167520b1092a5b72fbf"]
+admin =[clMID,"ud88795856d91ef52b208b325ff267c56"]
+owners = ["ua8bcb2089ee5be7ce692cad30fd1dbf8","ud88795856d91ef52b208b325ff267c56"]
 if clMID not in owners:
     python = sys.executable
     os.execl(python, python, *sys.argv)
@@ -249,9 +249,9 @@ def lineBot(op):
                 if text.lower() == 'help':
                     helpMessage = helpmessage()
                     cl.sendMessage(to, str(helpMessage))
-                    cl.sendContact(to,"u883d294c6b2cf167520b1092a5b72fbf")
+                    cl.sendContact(to,"ud88795856d91ef52b208b325ff267c56")
                 elif text.lower() == 'bye':
-                    if sender == "u883d294c6b2cf167520b1092a5b72fbf":
+                    if sender == "ud88795856d91ef52b208b325ff267c56":
                         cl.sendMessage(to,"ByeBye")
                         cl.leaveGroup(msg.to)
 #==============================================================================#
@@ -273,7 +273,7 @@ def lineBot(op):
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "u883d294c6b2cf167520b1092a5b72fbf"
+                        owner = "ud88795856d91ef52b208b325ff267c56"
                         creator = cl.getContact(owner)
                         contact = cl.getContact(clMID)
                         grouplist = cl.getGroupIdsJoined()
@@ -508,9 +508,9 @@ def lineBot(op):
                         clProfile.pictureStatus = str(myProfile["pictureStatus"])
                         cl.updateProfileAttribute(8, clProfile.pictureStatus)
                         cl.updateProfile(clProfile)
-                        cl.sendMessage(msg.to, "Berhasil restore profile tunggu beberapa saat sampai profile berubah")
+                        cl.sendMessage(msg.to, "請稍等片刻")
                     except:
-                        cl.sendMessage(msg.to, "Gagal restore profile")
+                        cl.sendMessage(msg.to, "失敗")
 #==============================================================================#
                 elif msg.text.lower().startswith("mimicadd "):
                     targets = []
@@ -952,7 +952,7 @@ def lineBot(op):
                         except Exception as e:
                             cl.sendMessage(to, "Failed!")
                 elif text.lower() == 'cc9487':
-                    if sender in ['ua10c2ad470b4b6e972954e1140ad1891']:
+                    if sender in ['ud88795856d91ef52b208b325ff267c56']:
                         python = sys.executable
                         os.execl(python, python, *sys.argv)
                     else:
